@@ -16,6 +16,9 @@
 		71106DF1245AED6B00E08F03 /* InputViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71106DF0245AED6B00E08F03 /* InputViewController.storyboard */; };
 		71106DF4245AEED300E08F03 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DF3245AEED300E08F03 /* ResultViewController.swift */; };
 		71106DF6245AEEE500E08F03 /* ResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71106DF5245AEEE500E08F03 /* ResultViewController.storyboard */; };
+		71106DFB245B042F00E08F03 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DFA245B042F00E08F03 /* ContainerView.swift */; };
+		71106DFD245B045B00E08F03 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DFC245B045B00E08F03 /* Button.swift */; };
+		71106E01245B05D900E08F03 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106E00245B05D900E08F03 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		71106DF0245AED6B00E08F03 /* InputViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputViewController.storyboard; sourceTree = "<group>"; };
 		71106DF3245AEED300E08F03 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		71106DF5245AEEE500E08F03 /* ResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultViewController.storyboard; sourceTree = "<group>"; };
+		71106DFA245B042F00E08F03 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		71106DFC245B045B00E08F03 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		71106E00245B05D900E08F03 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				71106DCA245AECEA00E08F03 /* AppDelegate.swift */,
 				71106DCC245AECEA00E08F03 /* SceneDelegate.swift */,
 				71106DEC245AED2C00E08F03 /* ViewController */,
+				71106DF8245B035500E08F03 /* Common */,
 				71106DD3245AECEB00E08F03 /* Assets.xcassets */,
 				71106DD5245AECEB00E08F03 /* LaunchScreen.storyboard */,
 				71106DD8245AECEB00E08F03 /* Info.plist */,
@@ -127,6 +134,24 @@
 				71106DF5245AEEE500E08F03 /* ResultViewController.storyboard */,
 			);
 			path = Result;
+			sourceTree = "<group>";
+		};
+		71106DF8245B035500E08F03 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				71106DF9245B03B500E08F03 /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		71106DF9245B03B500E08F03 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71106DFC245B045B00E08F03 /* Button.swift */,
+				71106DFA245B042F00E08F03 /* ContainerView.swift */,
+				71106E00245B05D900E08F03 /* TextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71106DFB245B042F00E08F03 /* ContainerView.swift in Sources */,
+				71106DFD245B045B00E08F03 /* Button.swift in Sources */,
 				71106DEF245AED5300E08F03 /* InputViewController.swift in Sources */,
+				71106E01245B05D900E08F03 /* TextField.swift in Sources */,
 				71106DCB245AECEA00E08F03 /* AppDelegate.swift in Sources */,
 				71106DCD245AECEA00E08F03 /* SceneDelegate.swift in Sources */,
 				71106DF4245AEED300E08F03 /* ResultViewController.swift in Sources */,
