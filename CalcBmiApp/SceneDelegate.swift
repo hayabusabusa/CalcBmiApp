@@ -24,8 +24,9 @@ extension SceneDelegate {
     
     private func setupRootViewController(scene: UIWindowScene) {
         let window = UIWindow(windowScene: scene)
+        let inputVC = UIStoryboard(name: "InputViewController", bundle: nil).instantiateInitialViewController()!
         self.window = window
-        window.rootViewController = UIStoryboard(name: "InputViewController", bundle: nil).instantiateInitialViewController()
+        window.rootViewController = UINavigationController(rootViewController: inputVC)
         window.makeKeyAndVisible()
     }
 }
