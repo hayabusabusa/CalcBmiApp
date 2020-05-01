@@ -23,4 +23,10 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: IBAction
+    
+    @IBAction func onTapBackButton(_ sender: Any) {
+        pop(animated: true)
+    }
 }

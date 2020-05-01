@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-ka-hJy">
-                                <rect key="frame" x="24" y="283" width="366" height="330"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-ka-hJy" customClass="ContainerView" customModule="CalcBmiApp" customModuleProvider="target">
+                                <rect key="frame" x="24" y="281" width="366" height="334"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SU-yo-xGj" userLabel="Separator">
-                                        <rect key="frame" x="182.5" y="208" width="1" height="24"/>
+                                        <rect key="frame" x="182.5" y="212" width="1" height="24"/>
                                         <color key="backgroundColor" name="Separator"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="1" id="WDI-s0-xVn"/>
@@ -28,7 +28,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qmr-3Y-WfP" userLabel="Contens Stack View">
-                                        <rect key="frame" x="24" y="24" width="318" height="282"/>
+                                        <rect key="frame" x="24" y="24" width="318" height="286"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_pict_presentation" translatesAutoresizingMaskIntoConstraints="NO" id="7it-L4-wlj">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="88"/>
@@ -38,7 +38,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iUX-eM-igU" userLabel="Bmi Labels Stack View">
-                                                <rect key="frame" x="0.0" y="112" width="318" height="42"/>
+                                                <rect key="frame" x="0.0" y="112" width="318" height="46"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたのBMI指数は..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a6-q2-jeQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="318" height="14"/>
@@ -47,15 +47,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69.44  肥満(4度)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPo-4L-3dC">
-                                                        <rect key="frame" x="0.0" y="22" width="318" height="20"/>
-                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="22" width="318" height="24"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="24"/>
                                                         <color key="textColor" name="Primary"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OOh-n3-uCO" userLabel="Standard Labels Stack View">
-                                                <rect key="frame" x="0.0" y="178" width="318" height="36"/>
+                                                <rect key="frame" x="0.0" y="182" width="318" height="36"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rh5-Dm-dNB" userLabel="Weight Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="157" height="36"/>
@@ -100,7 +100,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-ib-af9" customClass="Button" customModule="CalcBmiApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="238" width="318" height="44"/>
+                                                <rect key="frame" x="0.0" y="242" width="318" height="44"/>
                                                 <color key="backgroundColor" name="Primary"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="3yy-m4-XT1"/>
@@ -114,6 +114,9 @@
                                                         <real key="value" value="4"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="onTapBackButton:" destination="2FU-cY-a3a" eventType="touchUpInside" id="yWa-Nz-SRD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -127,6 +130,23 @@
                                     <constraint firstItem="qmr-3Y-WfP" firstAttribute="leading" secondItem="tZf-ka-hJy" secondAttribute="leading" constant="24" id="Vqq-FV-WCJ"/>
                                     <constraint firstItem="2SU-yo-xGj" firstAttribute="centerY" secondItem="OOh-n3-uCO" secondAttribute="centerY" id="fIU-3d-v2P"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
