@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,13 +15,151 @@
                     <view key="view" contentMode="scaleToFill" id="0px-wV-Rhq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZf-ka-hJy">
+                                <rect key="frame" x="24" y="283" width="366" height="330"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SU-yo-xGj" userLabel="Separator">
+                                        <rect key="frame" x="182.5" y="208" width="1" height="24"/>
+                                        <color key="backgroundColor" name="Separator"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="WDI-s0-xVn"/>
+                                            <constraint firstAttribute="height" constant="24" id="jf9-B9-IRK"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="qmr-3Y-WfP" userLabel="Contens Stack View">
+                                        <rect key="frame" x="24" y="24" width="318" height="282"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_pict_presentation" translatesAutoresizingMaskIntoConstraints="NO" id="7it-L4-wlj">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="88"/>
+                                                <color key="tintColor" name="Primary"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="MBv-T1-frh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iUX-eM-igU" userLabel="Bmi Labels Stack View">
+                                                <rect key="frame" x="0.0" y="112" width="318" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたのBMI指数は..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a6-q2-jeQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="14"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                        <color key="textColor" name="Black"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69.44  肥満(4度)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPo-4L-3dC">
+                                                        <rect key="frame" x="0.0" y="22" width="318" height="20"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                                        <color key="textColor" name="Primary"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OOh-n3-uCO" userLabel="Standard Labels Stack View">
+                                                <rect key="frame" x="0.0" y="178" width="318" height="36"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="rh5-Dm-dNB" userLabel="Weight Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="36"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="適正体重" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcy-zE-nky">
+                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="12"/>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                                                <color key="textColor" name="Gray"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31.68 kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G59-Ak-Bcg">
+                                                                <rect key="frame" x="0.0" y="16" width="157" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="A6r-xP-TcZ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                                <color key="textColor" name="Primary"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gnc-p1-Hxj" userLabel="Comparison Stack View">
+                                                        <rect key="frame" x="161" y="0.0" width="157" height="36"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在との比較" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTS-kQ-V7I">
+                                                                <rect key="frame" x="0.0" y="0.0" width="157" height="12"/>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
+                                                                <color key="textColor" name="Gray"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 68.32 kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-S2-kfn">
+                                                                <rect key="frame" x="0.0" y="16" width="157" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="en6-Gl-biA"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                                <color key="textColor" name="Primary"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-ib-af9" customClass="Button" customModule="CalcBmiApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="238" width="318" height="44"/>
+                                                <color key="backgroundColor" name="Primary"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="3yy-m4-XT1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                <state key="normal" title="もう一度計算する">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="qmr-3Y-WfP" firstAttribute="top" secondItem="tZf-ka-hJy" secondAttribute="top" constant="24" id="4gg-be-opx"/>
+                                    <constraint firstAttribute="bottom" secondItem="qmr-3Y-WfP" secondAttribute="bottom" constant="24" id="4nA-fG-e3z"/>
+                                    <constraint firstItem="2SU-yo-xGj" firstAttribute="centerX" secondItem="OOh-n3-uCO" secondAttribute="centerX" id="8Qj-Mi-HGo"/>
+                                    <constraint firstAttribute="trailing" secondItem="qmr-3Y-WfP" secondAttribute="trailing" constant="24" id="GQC-AC-Ckv"/>
+                                    <constraint firstItem="qmr-3Y-WfP" firstAttribute="leading" secondItem="tZf-ka-hJy" secondAttribute="leading" constant="24" id="Vqq-FV-WCJ"/>
+                                    <constraint firstItem="2SU-yo-xGj" firstAttribute="centerY" secondItem="OOh-n3-uCO" secondAttribute="centerY" id="fIU-3d-v2P"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="Wo3-vn-eVh" firstAttribute="trailing" secondItem="tZf-ka-hJy" secondAttribute="trailing" constant="24" id="6cw-NU-8OV"/>
+                            <constraint firstItem="tZf-ka-hJy" firstAttribute="centerY" secondItem="0px-wV-Rhq" secondAttribute="centerY" id="FCj-yr-sE4"/>
+                            <constraint firstItem="tZf-ka-hJy" firstAttribute="leading" secondItem="Wo3-vn-eVh" secondAttribute="leading" constant="24" id="jpn-kA-Gni"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Wo3-vn-eVh"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYM-Az-rYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="-287"/>
+            <point key="canvasLocation" x="218.84057971014494" y="-287.27678571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_pict_presentation" width="128" height="128"/>
+        <namedColor name="Background">
+            <color red="0.97600001096725464" green="0.98400002717971802" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Black">
+            <color red="0.16899999976158142" green="0.32899999618530273" blue="0.41600000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gray">
+            <color red="0.3449999988079071" green="0.46299999952316284" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.18799999356269836" green="0.7839999794960022" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Separator">
+            <color red="0.91399997472763062" green="0.92900002002716064" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
