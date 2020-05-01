@@ -12,6 +12,9 @@ final class InputViewController: UIViewController {
     
     // MARK: IBOutlet
     
+    @IBOutlet private weak var heightTextField: UITextField!
+    @IBOutlet private weak var weightTextField: UITextField!
+    
     // MARK: Properties
     
     // MARK: Lifecycle
@@ -22,6 +25,9 @@ final class InputViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigation()
+        setupHeightTextField()
+        setupWeightTextField()
         setupKeyboardObserver()
     }
     
@@ -37,6 +43,34 @@ final class InputViewController: UIViewController {
     }
     
     @IBAction func onTapResetButton(_ sender: Any) {
+        heightTextField.text = ""
+        weightTextField.text = ""
+    }
+}
+
+// MARK: - Setup
+
+extension InputViewController {
+    
+    private func setupNavigation() {
+        navigationItem.title = "入力画面"
+    }
+    
+    private func setupHeightTextField() {
+        heightTextField.delegate = self
+    }
+    
+    private func setupWeightTextField() {
+        weightTextField.delegate = self
+    }
+}
+
+// MARK: - TextField delegate
+
+extension InputViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
     }
 }
 
@@ -63,6 +97,7 @@ extension InputViewController {
     @objc
     private func onKeyboardWillHide(_ notification: Notification?) {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+        // NOTE: 上にずらしたのを元に戻す
         UIView.animate(withDuration: duration) {
             self.view.transform = CGAffineTransform.identity
         }

@@ -49,10 +49,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWK-hR-gX4" customClass="ContainerView" customModule="CalcBmiApp" customModuleProvider="target">
-                                <rect key="frame" x="24" y="610" width="366" height="228"/>
+                                <rect key="frame" x="24" y="586" width="366" height="252"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Qvx-vc-vum">
-                                        <rect key="frame" x="24" y="24" width="318" height="180"/>
+                                        <rect key="frame" x="24" y="48" width="318" height="180"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j12-Um-7Gl" userLabel="Vertical Text Fields Stack View">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="88"/>
@@ -173,7 +173,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="Qvx-vc-vum" firstAttribute="top" secondItem="HWK-hR-gX4" secondAttribute="top" constant="24" id="3F2-qG-t9Z"/>
+                                    <constraint firstItem="Qvx-vc-vum" firstAttribute="top" secondItem="HWK-hR-gX4" secondAttribute="top" constant="48" id="3F2-qG-t9Z"/>
                                     <constraint firstAttribute="bottom" secondItem="Qvx-vc-vum" secondAttribute="bottom" constant="24" id="VcP-m0-tQG"/>
                                     <constraint firstAttribute="trailing" secondItem="Qvx-vc-vum" secondAttribute="trailing" constant="24" id="ax5-Mp-nxt"/>
                                     <constraint firstItem="Qvx-vc-vum" firstAttribute="leading" secondItem="HWK-hR-gX4" secondAttribute="leading" constant="24" id="jsG-hh-3Kc"/>
@@ -209,6 +209,10 @@
                         <viewLayoutGuide key="safeArea" id="Pg2-Hd-iNO"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="heightTextField" destination="dEf-GJ-nVx" id="DSB-xT-495"/>
+                        <outlet property="weightTextField" destination="iaH-pr-BKh" id="Ape-oN-3JJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhA-Ol-NJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

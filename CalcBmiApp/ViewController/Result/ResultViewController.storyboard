@@ -71,7 +71,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="A6r-xP-TcZ"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                                                 <color key="textColor" name="Primary"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -91,7 +91,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="20" id="en6-Gl-biA"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                                                 <color key="textColor" name="Primary"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -158,6 +158,11 @@
                         <viewLayoutGuide key="safeArea" id="Wo3-vn-eVh"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="bmiLabel" destination="kPo-4L-3dC" id="0fk-2h-FPR"/>
+                        <outlet property="comparisonLabel" destination="xd9-S2-kfn" id="68Y-ur-Zxu"/>
+                        <outlet property="standardWeightLabel" destination="G59-Ak-Bcg" id="hyt-5f-xlv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYM-Az-rYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
