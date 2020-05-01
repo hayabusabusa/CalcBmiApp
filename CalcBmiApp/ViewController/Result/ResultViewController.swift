@@ -16,6 +16,10 @@ final class ResultViewController: UIViewController {
     
     // MARK: Lifecycle
     
+    static func instantiate() -> ResultViewController {
+        return Storyboard.ResultViewController.instantiate(ResultViewController.self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

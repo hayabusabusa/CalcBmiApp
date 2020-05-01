@@ -16,6 +16,10 @@ final class InputViewController: UIViewController {
     
     // MARK: Lifecycle
     
+    static func instantiate() -> InputViewController {
+        return Storyboard.InputViewController.instantiate(InputViewController.self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
