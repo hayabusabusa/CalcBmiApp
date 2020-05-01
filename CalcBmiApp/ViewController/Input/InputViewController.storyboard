@@ -48,11 +48,156 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWK-hR-gX4" customClass="ContainerView" customModule="CalcBmiApp" customModuleProvider="target">
+                                <rect key="frame" x="24" y="602" width="366" height="236"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Qvx-vc-vum">
+                                        <rect key="frame" x="24" y="24" width="318" height="188"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j12-Um-7Gl" userLabel="Vertical Text Fields Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="96"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8KG-7k-vd1" userLabel="Text Field Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="318" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_wight" translatesAutoresizingMaskIntoConstraints="NO" id="Xfm-pj-diD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="40"/>
+                                                                <color key="tintColor" name="Primary"/>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iaH-pr-BKh" customClass="TextField" customModule="CalcBmiApp" customModuleProvider="target">
+                                                                <rect key="frame" x="36" y="0.0" width="246" height="40"/>
+                                                                <color key="textColor" name="Black"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                        <color key="value" name="Black"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq1-bC-yoS">
+                                                                <rect key="frame" x="294" y="0.0" width="24" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="497-yu-111"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                                <color key="textColor" name="Black"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="MSf-qS-reu"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vx1-xx-gRr" userLabel="Text Field Stack View">
+                                                        <rect key="frame" x="0.0" y="56" width="318" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_ruler" translatesAutoresizingMaskIntoConstraints="NO" id="bbt-du-NXM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="40"/>
+                                                                <color key="tintColor" name="Primary"/>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEf-GJ-nVx" customClass="TextField" customModule="CalcBmiApp" customModuleProvider="target">
+                                                                <rect key="frame" x="36" y="0.0" width="246" height="40"/>
+                                                                <color key="textColor" name="Black"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                        <color key="value" name="Black"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j78-8V-a9L">
+                                                                <rect key="frame" x="294" y="0.0" width="24" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="24" id="fCH-vx-b6i"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                                <color key="textColor" name="Black"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="5qb-Cc-vTi"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cny-tw-eQY" userLabel="Horizontal Buttons Stack View">
+                                                <rect key="frame" x="0.0" y="144" width="318" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyl-hQ-9St" customClass="Button" customModule="CalcBmiApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="151" height="44"/>
+                                                        <color key="backgroundColor" name="Primary"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                        <state key="normal" title="計算">
+                                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE9-fC-GvY" customClass="Button" customModule="CalcBmiApp" customModuleProvider="target">
+                                                        <rect key="frame" x="167" y="0.0" width="151" height="44"/>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                        <state key="normal" title="リセット">
+                                                            <color key="titleColor" name="Primary"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="4"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" name="Primary"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="n85-29-m9Y"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Qvx-vc-vum" firstAttribute="top" secondItem="HWK-hR-gX4" secondAttribute="top" constant="24" id="3F2-qG-t9Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qvx-vc-vum" secondAttribute="bottom" constant="24" id="VcP-m0-tQG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qvx-vc-vum" secondAttribute="trailing" constant="24" id="ax5-Mp-nxt"/>
+                                    <constraint firstItem="Qvx-vc-vum" firstAttribute="leading" secondItem="HWK-hR-gX4" secondAttribute="leading" constant="24" id="jsG-hh-3Kc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="62c-rL-Wzl" firstAttribute="top" secondItem="Pg2-Hd-iNO" secondAttribute="top" constant="32" id="D9O-hU-edf"/>
+                            <constraint firstItem="Pg2-Hd-iNO" firstAttribute="bottom" secondItem="HWK-hR-gX4" secondAttribute="bottom" constant="24" id="GVK-TN-RYg"/>
+                            <constraint firstItem="Pg2-Hd-iNO" firstAttribute="trailing" secondItem="HWK-hR-gX4" secondAttribute="trailing" constant="24" id="Ic7-8K-eD6"/>
                             <constraint firstItem="Pg2-Hd-iNO" firstAttribute="trailing" secondItem="62c-rL-Wzl" secondAttribute="trailing" constant="32" id="KVN-D1-fAv"/>
+                            <constraint firstItem="HWK-hR-gX4" firstAttribute="leading" secondItem="Pg2-Hd-iNO" secondAttribute="leading" constant="24" id="P5k-l7-NOF"/>
                             <constraint firstItem="62c-rL-Wzl" firstAttribute="leading" secondItem="Pg2-Hd-iNO" secondAttribute="leading" constant="32" id="jec-W4-PbH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pg2-Hd-iNO"/>
@@ -61,11 +206,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhA-Ol-NJX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="-287"/>
+            <point key="canvasLocation" x="89.855072463768124" y="-287.27678571428572"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_ruler" width="24" height="24"/>
+        <image name="ic_wight" width="24" height="24"/>
         <image name="img_pict_run" width="128" height="128"/>
+        <namedColor name="Background">
+            <color red="0.97647058823529409" green="0.98431372549019602" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Black">
             <color red="0.16862745098039217" green="0.32941176470588235" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

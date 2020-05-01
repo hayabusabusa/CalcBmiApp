@@ -20,3 +20,10 @@ final class InputViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+extension InputViewController {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+}

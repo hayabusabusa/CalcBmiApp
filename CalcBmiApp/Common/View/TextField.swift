@@ -46,7 +46,6 @@ class TextField: UITextField {
         isExclusiveTouch = true
         backgroundColor = .clear
         borderStyle = .none
-        contentVerticalAlignment = .top
 
         setupViews()
     }
