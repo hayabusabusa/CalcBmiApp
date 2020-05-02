@@ -9,7 +9,8 @@
 import Foundation
 
 protocol CalcBmiModelInterface: AnyObject {
-    
+    func calcBMI(with cmHeight: Double, kgWeight: Double) -> Double
+    func calcStandardWeight(with cmHeight: Double) -> Double
 }
 
 final class CalcBmiModel: CalcBmiModelInterface {
@@ -38,6 +39,7 @@ final class CalcBmiModel: CalcBmiModelInterface {
     }
     
     /// Calculate standard weight with height.
+    ///
     /// - Parameter cmHeight: Height (cm)
     /// - Returns: Standard weight (kg)
     func calcStandardWeight(with cmHeight: Double) -> Double {
