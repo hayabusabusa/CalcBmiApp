@@ -18,15 +18,21 @@ final class ResultViewController: UIViewController {
     
     // MARK: Properties
     
+    private var model: CalcBmiModelInterface!
+    
     // MARK: Lifecycle
     
-    static func instantiate() -> ResultViewController {
-        return Storyboard.ResultViewController.instantiate(ResultViewController.self)
+    static func configure(with cmHeight: Double, kgWeight: Double) -> ResultViewController {
+        let vc = Storyboard.ResultViewController.instantiate(ResultViewController.self)
+        vc.model = CalcBmiModel(cmHeight: cmHeight, kgWeight: kgWeight)
+        return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
+        setupBmiLabel()
+        setupStandardWeightLabel()
     }
     
     // MARK: IBAction
@@ -42,5 +48,13 @@ extension ResultViewController {
     
     private func setupNavigation() {
         navigationItem.title = "計算結果"
+    }
+    
+    private func setupBmiLabel() {
+        bmiLabel.text = String(format: "%.2f", model.bmi)
+    }
+    
+    private func setupStandardWeightLabel() {
+        standardWeightLabel.text = String(format: "%.2f kg", model.stdWeight)
     }
 }

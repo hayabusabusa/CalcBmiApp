@@ -9,40 +9,32 @@
 import Foundation
 
 protocol CalcBmiModelInterface: AnyObject {
-    func calcBMI(with cmHeight: Double, kgWeight: Double) -> Double
-    func calcStandardWeight(with cmHeight: Double) -> Double
+    var bmi: Double { get }
+    var stdWeight: Double { get }
 }
 
 final class CalcBmiModel: CalcBmiModelInterface {
     
     // MARK: Properties
     
+    private let cmHeight: Double
+    private let kgWeight: Double
     private let kStandardWeightConstant: Double = 22.0
     
     // MARK: Initializer
     
-    init() {
-        
+    init(cmHeight: Double, kgWeight: Double) {
+        self.cmHeight = cmHeight
+        self.kgWeight = kgWeight
     }
     
     // MARK: Calculate BMI
     
-    /// Calculate Body Mass Index with height and weight.
-    ///
-    /// - NOTE: BMI = weight(kg) / (height(m)) ^ 2
-    /// - Parameters:
-    ///   - cmHeight: Height (cm)
-    ///   - kgWeight: Weight (kg)
-    /// - Returns: BMI
-    func calcBMI(with cmHeight: Double, kgWeight: Double) -> Double {
+    var bmi: Double {
         return kgWeight / pow((cmHeight / 100), 2)
     }
     
-    /// Calculate standard weight with height.
-    ///
-    /// - Parameter cmHeight: Height (cm)
-    /// - Returns: Standard weight (kg)
-    func calcStandardWeight(with cmHeight: Double) -> Double {
+    var stdWeight: Double {
         return pow((cmHeight / 100), 2) * kStandardWeightConstant
     }
 }

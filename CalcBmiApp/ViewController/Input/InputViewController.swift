@@ -39,7 +39,12 @@ final class InputViewController: UIViewController {
     // MARK: IBAction
     
     @IBAction func onTapCalcButton(_ sender: Any) {
-        push(viewController: ResultViewController.instantiate(), animated: true)
+        // TODO: Validation
+        guard let heightText = heightTextField.text,
+            let weightText   = weightTextField.text,
+            let cmHeight     = Double(heightText),
+            let kgWight      = Double(weightText) else { return }
+        push(viewController: ResultViewController.configure(with: cmHeight, kgWeight: kgWight), animated: true)
     }
     
     @IBAction func onTapResetButton(_ sender: Any) {
