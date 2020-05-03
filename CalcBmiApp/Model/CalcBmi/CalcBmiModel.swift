@@ -8,12 +8,13 @@
 
 import Foundation
 
-protocol CalcBmiModelInterface: AnyObject {
+protocol CalcBmiModelInterface {
     var bmi: Double { get }
     var stdWeight: Double { get }
+    var diffOfWeight: Double { get }
 }
 
-final class CalcBmiModel: CalcBmiModelInterface {
+struct CalcBmiModel: CalcBmiModelInterface {
     
     // MARK: Properties
     
@@ -21,20 +22,17 @@ final class CalcBmiModel: CalcBmiModelInterface {
     private let kgWeight: Double
     private let kStandardWeightConstant: Double = 22.0
     
+    private(set) var bmi: Double
+    private(set) var stdWeight: Double
+    private(set) var diffOfWeight: Double
+    
     // MARK: Initializer
     
     init(cmHeight: Double, kgWeight: Double) {
         self.cmHeight = cmHeight
         self.kgWeight = kgWeight
-    }
-    
-    // MARK: Calculate BMI
-    
-    var bmi: Double {
-        return kgWeight / pow((cmHeight / 100), 2)
-    }
-    
-    var stdWeight: Double {
-        return pow((cmHeight / 100), 2) * kStandardWeightConstant
+        self.bmi = kgWeight / pow((cmHeight / 100), 2)
+        self.stdWeight = pow((cmHeight / 100), 2) * kStandardWeightConstant
+        self.diffOfWeight = kgWeight - stdWeight
     }
 }

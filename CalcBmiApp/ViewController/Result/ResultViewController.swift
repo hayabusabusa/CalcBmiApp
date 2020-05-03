@@ -33,6 +33,7 @@ final class ResultViewController: UIViewController {
         setupNavigation()
         setupBmiLabel()
         setupStandardWeightLabel()
+        setupComparisonWeightLabel()
     }
     
     // MARK: IBAction
@@ -56,5 +57,10 @@ extension ResultViewController {
     
     private func setupStandardWeightLabel() {
         standardWeightLabel.text = String(format: "%.2f kg", model.stdWeight)
+    }
+    
+    private func setupComparisonWeightLabel() {
+        let sign = model.diffOfWeight.sign == .minus ? "-" : "+"
+        comparisonLabel.text = String(format: "\(sign) %.2f kg", fabs(model.diffOfWeight))
     }
 }
