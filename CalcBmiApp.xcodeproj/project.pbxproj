@@ -11,7 +11,6 @@
 		71106DCD245AECEA00E08F03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DCC245AECEA00E08F03 /* SceneDelegate.swift */; };
 		71106DD4245AECEB00E08F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71106DD3245AECEB00E08F03 /* Assets.xcassets */; };
 		71106DD7245AECEB00E08F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71106DD5245AECEB00E08F03 /* LaunchScreen.storyboard */; };
-		71106DE2245AECEB00E08F03 /* CalcBmiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DE1245AECEB00E08F03 /* CalcBmiAppTests.swift */; };
 		71106DEF245AED5300E08F03 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DEE245AED5300E08F03 /* InputViewController.swift */; };
 		71106DF1245AED6B00E08F03 /* InputViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71106DF0245AED6B00E08F03 /* InputViewController.storyboard */; };
 		71106DF4245AEED300E08F03 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106DF3245AEED300E08F03 /* ResultViewController.swift */; };
@@ -21,6 +20,7 @@
 		71106E01245B05D900E08F03 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106E00245B05D900E08F03 /* TextField.swift */; };
 		71106E36245BD62200E08F03 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106E35245BD62200E08F03 /* Storyboard.swift */; };
 		71106E39245BF82E00E08F03 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106E38245BF82E00E08F03 /* UIViewController+Extension.swift */; };
+		71141C9C24644D1A00088E5A /* ClacBmiModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71141C9B24644D1A00088E5A /* ClacBmiModelTests.swift */; };
 		71DA2D5C245CF98A00B546E8 /* CalcBmiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA2D5B245CF98A00B546E8 /* CalcBmiModel.swift */; };
 		71DA2D5F245D027F00B546E8 /* FormValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA2D5E245D027F00B546E8 /* FormValidationModel.swift */; };
 		71DA2D61245D074100B546E8 /* InvalidReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA2D60245D074100B546E8 /* InvalidReason.swift */; };
@@ -44,7 +44,6 @@
 		71106DD6245AECEB00E08F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71106DD8245AECEB00E08F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71106DDD245AECEB00E08F03 /* CalcBmiAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcBmiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71106DE1245AECEB00E08F03 /* CalcBmiAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBmiAppTests.swift; sourceTree = "<group>"; };
 		71106DE3245AECEB00E08F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71106DEE245AED5300E08F03 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		71106DF0245AED6B00E08F03 /* InputViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InputViewController.storyboard; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		71106E00245B05D900E08F03 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		71106E35245BD62200E08F03 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		71106E38245BF82E00E08F03 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		71141C9B24644D1A00088E5A /* ClacBmiModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClacBmiModelTests.swift; sourceTree = "<group>"; };
 		71DA2D5B245CF98A00B546E8 /* CalcBmiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBmiModel.swift; sourceTree = "<group>"; };
 		71DA2D5E245D027F00B546E8 /* FormValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidationModel.swift; sourceTree = "<group>"; };
 		71DA2D60245D074100B546E8 /* InvalidReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidReason.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		71106DE0245AECEB00E08F03 /* CalcBmiAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				71106DE1245AECEB00E08F03 /* CalcBmiAppTests.swift */,
+				71141C9B24644D1A00088E5A /* ClacBmiModelTests.swift */,
 				71106DE3245AECEB00E08F03 /* Info.plist */,
 			);
 			path = CalcBmiAppTests;
@@ -262,6 +262,7 @@
 					};
 					71106DDC245AECEB00E08F03 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 						TestTargetID = 71106DC6245AECEA00E08F03;
 					};
 				};
@@ -330,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71106DE2245AECEB00E08F03 /* CalcBmiAppTests.swift in Sources */,
+				71141C9C24644D1A00088E5A /* ClacBmiModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +512,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CalcBmiAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -521,6 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ShunyaYamada.CalcBmiAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CalcBmiApp.app/CalcBmiApp";
@@ -532,6 +535,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CalcBmiAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
