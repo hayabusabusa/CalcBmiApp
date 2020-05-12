@@ -39,12 +39,16 @@ final class InputViewController: UIViewController {
     // MARK: IBAction
     
     @IBAction func onTapCalcButton(_ sender: Any) {
-        // TODO: Validation
         guard let heightText = heightTextField.text,
-            let weightText   = weightTextField.text,
-            let cmHeight     = Double(heightText),
-            let kgWight      = Double(weightText) else { return }
-        push(viewController: ResultViewController.configure(with: cmHeight, kgWeight: kgWight), animated: true)
+            let weightText   = weightTextField.text else { return }
+        
+        if let cmHeight  = Double(heightText),
+            let kgWeight = Double(weightText) {
+            push(viewController: ResultViewController.configure(with: cmHeight, kgWeight: kgWeight), animated: true)
+        } else {
+            // NOTE: 無効な値が入力された場合
+            presentAlert(message: "未記入の項目がある\nもしくは入力した値に誤りがあります")
+        }
     }
     
     @IBAction func onTapResetButton(_ sender: Any) {

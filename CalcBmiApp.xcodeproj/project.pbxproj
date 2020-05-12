@@ -22,8 +22,6 @@
 		71106E39245BF82E00E08F03 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71106E38245BF82E00E08F03 /* UIViewController+Extension.swift */; };
 		71141C9C24644D1A00088E5A /* ClacBmiModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71141C9B24644D1A00088E5A /* ClacBmiModelTests.swift */; };
 		71DA2D5C245CF98A00B546E8 /* CalcBmiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA2D5B245CF98A00B546E8 /* CalcBmiModel.swift */; };
-		71DA2D5F245D027F00B546E8 /* FormValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA2D5E245D027F00B546E8 /* FormValidationModel.swift */; };
-		71DA2D61245D074100B546E8 /* InvalidReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DA2D60245D074100B546E8 /* InvalidReason.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +54,6 @@
 		71106E38245BF82E00E08F03 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		71141C9B24644D1A00088E5A /* ClacBmiModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClacBmiModelTests.swift; sourceTree = "<group>"; };
 		71DA2D5B245CF98A00B546E8 /* CalcBmiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBmiModel.swift; sourceTree = "<group>"; };
-		71DA2D5E245D027F00B546E8 /* FormValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidationModel.swift; sourceTree = "<group>"; };
-		71DA2D60245D074100B546E8 /* InvalidReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidReason.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +182,6 @@
 		71DA2D59245CF95000B546E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				71DA2D5D245D026400B546E8 /* FormValidation */,
 				71DA2D5A245CF96E00B546E8 /* CalcBmi */,
 			);
 			path = Model;
@@ -198,15 +193,6 @@
 				71DA2D5B245CF98A00B546E8 /* CalcBmiModel.swift */,
 			);
 			path = CalcBmi;
-			sourceTree = "<group>";
-		};
-		71DA2D5D245D026400B546E8 /* FormValidation */ = {
-			isa = PBXGroup;
-			children = (
-				71DA2D60245D074100B546E8 /* InvalidReason.swift */,
-				71DA2D5E245D027F00B546E8 /* FormValidationModel.swift */,
-			);
-			path = FormValidation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,14 +299,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71106E39245BF82E00E08F03 /* UIViewController+Extension.swift in Sources */,
-				71DA2D61245D074100B546E8 /* InvalidReason.swift in Sources */,
 				71106DFB245B042F00E08F03 /* ContainerView.swift in Sources */,
 				71106DFD245B045B00E08F03 /* Button.swift in Sources */,
 				71106DEF245AED5300E08F03 /* InputViewController.swift in Sources */,
 				71106E01245B05D900E08F03 /* TextField.swift in Sources */,
 				71DA2D5C245CF98A00B546E8 /* CalcBmiModel.swift in Sources */,
 				71106E36245BD62200E08F03 /* Storyboard.swift in Sources */,
-				71DA2D5F245D027F00B546E8 /* FormValidationModel.swift in Sources */,
 				71106DCB245AECEA00E08F03 /* AppDelegate.swift in Sources */,
 				71106DCD245AECEA00E08F03 /* SceneDelegate.swift in Sources */,
 				71106DF4245AEED300E08F03 /* ResultViewController.swift in Sources */,
